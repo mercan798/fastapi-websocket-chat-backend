@@ -16,7 +16,7 @@ app.mount("/uploads", StaticFiles(directory=str(UPLOAD_DIR)), name="uploads")
 from fastapi import UploadFile, File
 import uuid
 
-MAX_BYTES = 10 * 1024 * 1024  #
+MAX_BYTES = 10 * 1024 * 1024  
 
 @app.post("/upload")
 async def upload(file: UploadFile = File(...)):
